@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h3 {
+            height: 9vh;
+            text-align: center;
+            background-color: rgb(66, 66, 204);
+            font-size: 40px;
+            border-bottom: 3px solid black;
+        }
+        .navbar {
+            height: 9vh;
+            background-color: rgb(26, 109, 232);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar ul {
+            display: flex;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        p {
+            font-size: 20px;
+        }
+        #h1 {
+            color: black;
+        }
+        .last {
+            color: white;
+            background-color: rgb(41, 41, 135);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            grid-template-rows: 90vh;
+        }
+        .box1 {
+            background-color: aqua;
+            padding: 20px;
+        }
+        .box2 {
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                height: auto;
+            }
+            .navbar ul {
+                flex-direction: column;
+            }
+            li {
+                padding: 10px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h3 {
+                font-size: 25px;
+                height: auto;
+            }
+            li {
+                font-size: 16px;
+                padding: 10px;
+            }
+            .box1, .box2 {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <h3>Title</h3>
+   <nav class="navbar">
+       <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Contact</a></li>
+       </ul>
+   </nav>
+   <div class="container">
+       <div class="box1">
+           <h1 id="h1">Header</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptate consectetur optio quae fuga quo officiis debitis! Ullam modi, esse dolore perferendis beatae quisquam, cumque assumenda aspernatur consectetur nesciunt odit.</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consectetur cupiditate ipsa, quam incidunt libero ut? Quam totam impedit labore id, officia qui, at quas eveniet repellendus soluta rerum vero?</p>
+       </div>
+       <div class="box2">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo cupiditate delectus libero deleniti debitis necessitatibus esse, molestias quibusdam. Rerum nemo tempore ipsa qui quo earum beatae aliquid id libero?</p>
+       </div>
+   </div>
+</body>
+</html>
